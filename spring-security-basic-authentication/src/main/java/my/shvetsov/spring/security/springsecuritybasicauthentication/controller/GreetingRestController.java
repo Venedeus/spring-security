@@ -37,7 +37,8 @@ public class GreetingRestController {
   }
 
   @GetMapping("/api/v3/greetings")
-  public ResponseEntity<Map<String, String>> getGreeting(@AuthenticationPrincipal UserDetails userDetails) {
+  public ResponseEntity<Map<String, String>> getGreeting(
+      @AuthenticationPrincipal UserDetails userDetails) {
     return ResponseEntity
         .ok()
         .contentType(MediaType.APPLICATION_JSON)
@@ -45,7 +46,8 @@ public class GreetingRestController {
   }
 
   @GetMapping("/api/v5/greetings")
-  public ResponseEntity<Map<String, String>> getGreeting(UsernamePasswordAuthenticationToken principal) {
+  public ResponseEntity<Map<String, String>> getGreeting(
+      UsernamePasswordAuthenticationToken principal) {
     return ResponseEntity
         .ok()
         .contentType(MediaType.APPLICATION_JSON)
