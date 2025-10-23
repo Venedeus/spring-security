@@ -2,7 +2,7 @@ spring:
   application:
     name: spring-security-basic-authentication
   profiles:
-    active: springSecurityBasicAuthenticationDatasourceConfig
+    active: springSecurityBasicAuthenticationCustomConfigurerConfig
   security:
     user:
       password: password
