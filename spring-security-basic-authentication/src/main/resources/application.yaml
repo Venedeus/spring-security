@@ -2,4 +2,12 @@ spring:
   application:
     name: spring-security-basic-authentication
   profiles:
-    active: springSecurityBasicAuthenticationEntryPointConfig
+    active: springSecurityBasicAuthenticationDatasourceConfig
+  security:
+    user:
+      password: password
+  sql:
+    init:
+      mode: always
+  datasource:
+    url: jdbc:tc:postgresql:15:///sandbox?TC_DAEMON=true
