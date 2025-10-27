@@ -1,0 +1,2 @@
+GET http://localhost:8080/api/v5/greetings
+Authorization: HEX 6462757365723a706173737776f7264
