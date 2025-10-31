@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: spring-security-keycloak
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/test
+          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/test
+            user-name-attribute: preferred_username
+        registration:
+          keycloak:
+            client-id: springsecurity
+            scope: openid
+server:
+  port: 8081
+jwt:
+  auth:
+    converter:
+      resource-id: springsecurity
+      principal-attribute: preferred_username
+logging:
+  level:
+    org.springframework.security: TRACE

@@ -1,0 +1,4 @@
+POST http://localhost:8080/realms/test/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+client_id=springsecurity&client_secret=vL7D9efRVtu2WwYZq5BHKmBjwsF1N8uc&username=test_user&password=password&grant_type=password
